@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>Red</span>
+      <input
+        type="range"
+        min="0"
+        max="255"
+        step="25"
+        value="0"
+        id="redRange"
+        oninput="updateColor()" />
+    </div>
+    <div>
+      <span>Blue</span>
+      <input
+        type="range"
+        min="0"
+        max="255"
+        step="25"
+        value="0"
+        id="blueRange"
+        oninput="updateColor()" />
+    </div>
+    <div>
+      <span>Green</span>
+      <input
+        type="range"
+        min="0"
+        max="255"
+        step="25"
+        value="0"
+        id="greenRange"
+        oninput="updateColor()" />
+    </div>
+    <p id="outputText" style="font-size: 20px">
+      Change the 3 RGB Colors above to observe my color change
+    </p>
+    <script>
+      function updateColor() {
+        let redValue = document.getElementById("redRange").value;
+        let blueValue = document.getElementById("blueRange").value;
+        let greenValue = document.getElementById("greenRange").value;
+
+        document.getElementById(
+          "outputText"
+        ).style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+      }
+    </script>
+  </body>
+</html>

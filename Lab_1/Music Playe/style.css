@@ -1,0 +1,129 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+i {
+  color: white;
+}
+/*  ----------------------------------- Container ---------------------------- */
+.container {
+  width: fit-content;
+  height: fit-content;
+  background-color: #1d1b40;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*  ----------------------------------- Image ---------------------------- */
+#img-src {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/*  ----------------------------------- audio-div ---------------------------- */
+.song-div {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#song-bar {
+  width: 100%;
+  height: 6px;
+  background-color: blanchedalmond;
+  /* margin-bottom: 10px; */
+  border-radius: 5px;
+  position: relative;
+}
+#song-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: inherit;
+  background: #e94952; /* Track color */
+  border-radius: 5px;
+  position: absolute;
+  cursor: pointer;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+#song-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+}
+
+/*  ----------------------------------- song controls ---------------------------- */
+.song-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.song-controls button {
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 50%;
+  /* width: 40px;
+  height: 40px; */
+  width: fit-content;
+  padding: 4px 15px;
+}
+.song-controls button:hover {
+  border-radius: 50%;
+  border: 2px transparent solid;
+  background-color: #e94952;
+}
+
+/*  ----------------------------------- volume-control  ---------------------------- */
+.volume-control {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#volume-input {
+  appearance: none;
+  background-color: white;
+  height: 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#volume-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border: 0.5px solid #e94952;
+  border-radius: 50%;
+  background-color: #e94952;
+}
+/*  ----------------------------------- songs-btns ---------------------------- */
+#songs-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#songs-btns button {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 2px;
+}
+.selected {
+  background-color: #e94952 !important;
+  color: white;
+}

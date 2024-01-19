@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Change Email Address</h2>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+    <form action="">
+      <input
+        type="text"
+        placeholder="UserName"
+        pattern="[a-zA-Z]{2,10}"
+        required
+        oninvalid="this.setCustomValidity('Please enter your user name with a length between 2 and 10 characters')"
+        oninput="this.setCustomValidity('')" />
+      <input
+        type="email"
+        placeholder="Email"
+        pattern="[a-zA-Z0-9]{2,20}@(yahoo|gmail).com"
+        required />
+      <button type="submit">Change</button>
+    </form>
+  </body>
+</html>
