@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <body>
+    <button id="map-btn">Map</button>
+    <button id="info">Location Info</button>
+
+    <script>
+      if(navigator.geolocation){
+          let g=navigator.geolocation.getCurrentPosition(success,)
+      }else{
+        alert("Please update your browser")
+      }
+
+      function success(obj){
+          let lat  = obj.coords.latitude;
+          let lon  = obj.coords.longitude;
+          console.log(lat)
+          console.log(lon)
+      }
+      function failed(e){
+         console.lig(e)
+      }
+    </script>
+  </body>
+</html>

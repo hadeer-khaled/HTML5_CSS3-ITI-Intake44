@@ -1,0 +1,39 @@
+
+    <svg width="400" height="400" style="border: 2px solid black" xmlns="http://www.w3.org/2000/svg">
+      <line
+        x1="120"
+        y1="80"
+        x2="120"
+        y2="180"
+        stroke="#9D272D"
+        stroke-width="20"
+        stroke-linecap="round" />
+      <line
+        x1="165"
+        y1="93"
+        x2="165"
+        y2="193"
+        stroke="#9D272D"
+        stroke-width="20"
+        stroke-linecap="round" />
+      <line
+        x1="210"
+        y1="121"
+        x2="210"
+        y2="221"
+        stroke="#9D272D"
+        stroke-width="20"
+        stroke-linecap="round" />
+      <line
+        x1="120"
+        y1="93"
+        x2="215"
+        y2="93"
+        stroke="#9D272D"
+        stroke-width="20"
+        stroke-linecap="square" />
+
+      <circle cx="120" cy="50" r="10" fill="#9D272D" />
+
+      <circle cx="210" cy="93" r="10" fill="white" />
+    </svg>

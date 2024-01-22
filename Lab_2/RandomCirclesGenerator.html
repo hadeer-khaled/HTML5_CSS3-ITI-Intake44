@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="color" />
+    <button id="generate-btn">Generate</button>
+
+    <canvas
+      width="800"
+      height="400"
+      style="background-color: cadetblue; display: block">
+    </canvas>
+
+    <script>
+      let btn = document.getElementById("generate-btn");
+      let inputColor = document.querySelector("input[type=color]");
+      var c = document.getElementsByTagName("canvas")[0];
+      var ctx = c.getContext("2d");
+
+      btn.addEventListener("click", generateFun);
+
+      function generateFun() {
+        console.log(inputColor.value);
+        ctx.clearRect(0, 0, c.width, c.height);
+        for (let i = 0; i < 120; i++) {
+          ctx.beginPath();
+          var x = Math.floor(Math.random() * c.width);
+          var y = Math.floor(Math.random() * c.height);
+          ctx.fillStyle = `${inputColor.value}`;
+          ctx.strokeStyle = `${inputColor.value}`;
+          ctx.arc(x, y, 20, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
+      }
+    </script>
+  </body>
+</html>
