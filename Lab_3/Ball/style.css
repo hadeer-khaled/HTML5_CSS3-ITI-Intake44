@@ -1,0 +1,71 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.container {
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  margin-top: 200px;
+  background-image: url(assets/grass.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.ball-img {
+  width: 60px;
+  position: absolute;
+  top: 5px;
+  left: 123px;
+  animation-name: ballRotate, ballTranslateRotate;
+  animation-duration: 1.5s, 4s;
+  animation-delay: 0s, 2s;
+
+  animation-timing-function: steps(10);
+  animation-fill-mode: forwards;
+
+  /* animation-iteration-count: infinite, infinite; */
+}
+.player1 {
+  width: 197px;
+  position: absolute;
+  top: -110px;
+  left: -10px;
+}
+.player2 {
+  width: 197px;
+  position: absolute;
+  top: -120px;
+  right: 12px;
+}
+
+@keyframes ballTranslateRotate {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(600px) rotate(360deg);
+  }
+}
+
+/* @keyframes ballTranslate {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(700px);
+  }
+} */
+@keyframes ballRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
