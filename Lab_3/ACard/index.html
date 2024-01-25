@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="heart">
+        <div id="triangle-up"></div>
+      </div>
+    </div>
+    <style>
+      #heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+      }
+      #heart:before,
+      #heart:after {
+        position: absolute;
+        content: "";
+        left: 20px;
+        top: -40px;
+        width: 50px;
+        height: 80px;
+        background: red;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      #heart::before {
+        transform: rotate(-45deg) rotateX(180deg);
+      }
+      #heart:after {
+        left: 40px;
+        transform: rotate(45deg) rotateX(180deg);
+        transform-origin: 100% 100%;
+      }
+      #triangle-up {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid red;
+        top: 60px;
+        left: 29px;
+      }
+    </style>
+  </body>
+</html>

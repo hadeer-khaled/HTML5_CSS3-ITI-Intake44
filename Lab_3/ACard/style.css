@@ -1,0 +1,15 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.container {
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  margin-top: 200px;
+  background-image: url(assets/grass.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
