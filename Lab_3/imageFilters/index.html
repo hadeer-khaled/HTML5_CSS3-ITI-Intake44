@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>imgage filters</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-div"></div>
+      <div class="btns-div">
+        <button data-filter-type="saturate">Saturate</button>
+        <button data-filter-type="opacity">Opacity</button>
+        <button data-filter-type="invert">Invert</button>
+        <button data-filter-type="sepia">Sepia</button>
+        <button data-filter-type="grayscale">Gray Scale</button>
+      </div>
+      <div class="blend-mode-div">
+        <label for="blend-mode-menu">Select Blend Mode Type</label>
+        <select id="blend-mode-menu">
+          <option value="normal">normal</option>
+          <option value="multiply" selected>multiply</option>
+          <option value="hard-light">hard-light</option>
+          <option value="difference">difference</option>
+          <option value="overlay">overlay</option>
+        </select>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
